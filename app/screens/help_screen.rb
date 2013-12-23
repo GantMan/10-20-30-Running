@@ -1,6 +1,10 @@
 class HelpScreen < PM::GroupedTableScreen
   title "Help"
   
+  def on_load
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0) if (UIDevice.currentDevice.systemVersion.floatValue >= 7.0)
+  end
+  
   def will_appear
     set_nav_bar_button :left, title: "Close", action: :close_tapped
     
