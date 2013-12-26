@@ -13,12 +13,13 @@ class HomeScreen < PM::Screen
   end
 
   def set_up_view
-    set_attributes self.view, :home_view_style # found in HomeStyles module
-    add UILabel.new, :label_view_style
+    set_attributes self.view, :home_view_style 
     title = add FBBitmapFontView.new, :title_label_style
-    title.resetSize
+    text_label = add UILabel.new, :label_view_style
     true
   end
+
+  private 
 
   def states_tapped
     open StatesScreen
@@ -27,7 +28,5 @@ class HomeScreen < PM::Screen
   def help_tapped
     open_modal HelpScreen.new(nav_bar: true)
   end
-
-  private
 
 end

@@ -6,7 +6,7 @@
 module HomeStyles
   def label_view_style
     {
-      text: "Welcome to ProMotion!",
+      text: "To begin your 10-20-30 Running cycle, start your music (if any), and then press the start button below.",
       text_color: UIColor.whiteColor,
       background_color: UIColor.clearColor,
       shadow_color: UIColor.blackColor,
@@ -14,13 +14,14 @@ module HomeStyles
       text_alignment: UITextAlignmentCenter,
       font: UIFont.boldSystemFontOfSize(18.0),
       resize: [ :left, :right, :top ], # ProMotion sugar here
-      frame: CGRectMake(10, 100, 300, 45)
+      frame: CGRectMake(10, 150, 300, 1),
+      size_to_fit: [] # ProMotion splats -> like calling the method with no params
     }
   end
 
   def home_view_style
     {
-      background_color: UIColor.grayColor
+      background_color: UIColor.blackColor
     }
   end
 
@@ -35,7 +36,8 @@ module HomeStyles
       glowSize: 20.0,
       innerGlowSize: 3.0,
       edgeLength: 4.0,
-      frame: CGRectMake(10, 200, 300, 50)
+      frame: CGRectMake(10, 70, 305, 52),
+      resetSize: [] # ProMotion splats -> like calling the method with no params
     }
   end
 end
