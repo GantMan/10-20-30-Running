@@ -1,0 +1,14 @@
+PODS:
+  - FBDigitalFont (0.0.3)
+
+DEPENDENCIES:
+  - FBDigitalFont (from `https://github.com/lyokato/FBDigitalFont.git`)
+
+EXTERNAL SOURCES:
+  FBDigitalFont:
+    :git: https://github.com/lyokato/FBDigitalFont.git
+
+SPEC CHECKSUMS:
+  FBDigitalFont: c4711864b4db258a1a97c75262e4f2b6cb3eb294
+
+COCOAPODS: 0.29.0

@@ -1,0 +1,429 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='COCOAPODS_VERSION_MAJOR_FBDigitalFont' value='0'/>
+<enum name='COCOAPODS_VERSION_MINOR_FBDigitalFont' value='0'/>
+<enum name='COCOAPODS_VERSION_PATCH_FBDigitalFont' value='3'/>
+<enum name='FBFontDotTypeCircle' value='1'/>
+<enum name='FBFontDotTypeSquare' value='0'/>
+<enum name='FBFontSymbol0' value='0'/>
+<enum name='FBFontSymbol1' value='1'/>
+<enum name='FBFontSymbol2' value='2'/>
+<enum name='FBFontSymbol3' value='3'/>
+<enum name='FBFontSymbol4' value='4'/>
+<enum name='FBFontSymbol5' value='5'/>
+<enum name='FBFontSymbol6' value='6'/>
+<enum name='FBFontSymbol7' value='7'/>
+<enum name='FBFontSymbol8' value='8'/>
+<enum name='FBFontSymbol9' value='9'/>
+<enum name='FBFontSymbolA' value='10'/>
+<enum name='FBFontSymbolArrowDown' value='37'/>
+<enum name='FBFontSymbolArrowLeft' value='38'/>
+<enum name='FBFontSymbolArrowRight' value='39'/>
+<enum name='FBFontSymbolArrowUp' value='36'/>
+<enum name='FBFontSymbolB' value='11'/>
+<enum name='FBFontSymbolC' value='12'/>
+<enum name='FBFontSymbolColon' value='43'/>
+<enum name='FBFontSymbolD' value='13'/>
+<enum name='FBFontSymbolDash' value='40'/>
+<enum name='FBFontSymbolE' value='14'/>
+<enum name='FBFontSymbolExclamationMark' value='42'/>
+<enum name='FBFontSymbolF' value='15'/>
+<enum name='FBFontSymbolG' value='16'/>
+<enum name='FBFontSymbolH' value='17'/>
+<enum name='FBFontSymbolI' value='18'/>
+<enum name='FBFontSymbolJ' value='19'/>
+<enum name='FBFontSymbolK' value='20'/>
+<enum name='FBFontSymbolL' value='21'/>
+<enum name='FBFontSymbolM' value='22'/>
+<enum name='FBFontSymbolN' value='23'/>
+<enum name='FBFontSymbolO' value='24'/>
+<enum name='FBFontSymbolP' value='25'/>
+<enum name='FBFontSymbolQ' value='26'/>
+<enum name='FBFontSymbolR' value='27'/>
+<enum name='FBFontSymbolS' value='28'/>
+<enum name='FBFontSymbolSpace' value='41'/>
+<enum name='FBFontSymbolT' value='29'/>
+<enum name='FBFontSymbolU' value='30'/>
+<enum name='FBFontSymbolV' value='31'/>
+<enum name='FBFontSymbolW' value='32'/>
+<enum name='FBFontSymbolX' value='33'/>
+<enum name='FBFontSymbolY' value='34'/>
+<enum name='FBFontSymbolZ' value='35'/>
+<class name='FBBitmapFont'>
+<method class_method='true' selector='drawBackgroundWithDotType:color:edgeLength:margin:horizontalAmount:verticalAmount:inContext:'>
+<arg declared_type='FBFontDotType' index='0' name='dotType' type='i'/>
+<arg declared_type='UIColor*' index='1' name='color' type='@'/>
+<arg declared_type='CGFloat' index='2' name='edgeLength' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='3' name='margin' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='4' name='horizontalAmount' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='5' name='verticalAmount' type='f' type64='d'/>
+<arg declared_type='CGContextRef' index='6' name='ctx' type='^{CGContext=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='drawSymbol:withDotType:color:edgeLength:margin:startPoint:inContext:'>
+<arg declared_type='FBFontSymbolType' index='0' name='symbol' type='i'/>
+<arg declared_type='FBFontDotType' index='1' name='dotType' type='i'/>
+<arg declared_type='UIColor*' index='2' name='color' type='@'/>
+<arg declared_type='CGFloat' index='3' name='edgeLength' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='4' name='margin' type='f' type64='d'/>
+<arg declared_type='CGPoint' index='5' name='startPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='CGContextRef' index='6' name='ctx' type='^{CGContext=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='numberOfDotsWideForSymbol:'>
+<arg declared_type='FBFontSymbolType' index='0' name='symbol' type='i'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='FBBitmapFontView'>
+<method selector='dotType'>
+<retval declared_type='FBFontDotType' type='i'/>
+</method>
+<method selector='edgeLength'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='glowColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='glowSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='innerGlowColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='innerGlowSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='margin'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='numberOfBottomPaddingDot'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='numberOfLeftPaddingDot'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='numberOfPaddingDotsBetweenDigits'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='numberOfRightPaddingDot'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='numberOfTopPaddingDot'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='offColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='onColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='resetSize'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDotType:'>
+<arg declared_type='FBFontDotType' index='0' name='dotType' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEdgeLength:'>
+<arg declared_type='float' index='0' name='edgeLength' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGlowColor:'>
+<arg declared_type='UIColor*' index='0' name='glowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGlowSize:'>
+<arg declared_type='float' index='0' name='glowSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerGlowColor:'>
+<arg declared_type='UIColor*' index='0' name='innerGlowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerGlowSize:'>
+<arg declared_type='float' index='0' name='innerGlowSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMargin:'>
+<arg declared_type='float' index='0' name='margin' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfBottomPaddingDot:'>
+<arg declared_type='NSInteger' index='0' name='numberOfBottomPaddingDot' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfLeftPaddingDot:'>
+<arg declared_type='NSInteger' index='0' name='numberOfLeftPaddingDot' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfPaddingDotsBetweenDigits:'>
+<arg declared_type='NSInteger' index='0' name='numberOfPaddingDotsBetweenDigits' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfRightPaddingDot:'>
+<arg declared_type='NSInteger' index='0' name='numberOfRightPaddingDot' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumberOfTopPaddingDot:'>
+<arg declared_type='NSInteger' index='0' name='numberOfTopPaddingDot' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOffColor:'>
+<arg declared_type='UIColor*' index='0' name='offColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnColor:'>
+<arg declared_type='UIColor*' index='0' name='onColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSymbols:'>
+<arg declared_type='NSArray*' index='0' name='symbols' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setText:'>
+<arg declared_type='NSString*' index='0' name='text' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sizeOfContents'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='symbols'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='text'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='FBFontSymbol'>
+<method class_method='true' selector='symbolsForString:'>
+<arg declared_type='NSString*' index='0' name='str' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='FBLCDFont'>
+<method class_method='true' selector='drawSymbol:edgeLength:lineWidth:startPoint:inContext:'>
+<arg declared_type='FBFontSymbolType' index='0' name='symbol' type='i'/>
+<arg declared_type='CGFloat' index='1' name='edgeLength' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='2' name='lineWidth' type='f' type64='d'/>
+<arg declared_type='CGPoint' index='3' name='startPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='CGContextRef' index='4' name='ctx' type='^{CGContext=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='FBLCDFontView'>
+<method selector='drawOffLine'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='edgeLength'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='glowColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='glowSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='horizontalPadding'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='innerGlowColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='innerGlowSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='lineColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='lineWidth'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='margin'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='offColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='resetSize'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDrawOffLine:'>
+<arg declared_type='BOOL' index='0' name='drawOffLine' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEdgeLength:'>
+<arg declared_type='float' index='0' name='edgeLength' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGlowColor:'>
+<arg declared_type='UIColor*' index='0' name='glowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGlowSize:'>
+<arg declared_type='float' index='0' name='glowSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHorizontalPadding:'>
+<arg declared_type='float' index='0' name='horizontalPadding' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerGlowColor:'>
+<arg declared_type='UIColor*' index='0' name='innerGlowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerGlowSize:'>
+<arg declared_type='float' index='0' name='innerGlowSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineColor:'>
+<arg declared_type='UIColor*' index='0' name='lineColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineWidth:'>
+<arg declared_type='float' index='0' name='lineWidth' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMargin:'>
+<arg declared_type='float' index='0' name='margin' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOffColor:'>
+<arg declared_type='UIColor*' index='0' name='offColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setText:'>
+<arg declared_type='NSString*' index='0' name='text' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVerticalPadding:'>
+<arg declared_type='float' index='0' name='verticalPadding' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sizeOfContents'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='text'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='verticalPadding'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+<class name='FBSquareFont'>
+<method class_method='true' selector='drawSymbol:horizontalEdgeLength:verticalEdgeLength:startPoint:inContext:'>
+<arg declared_type='FBFontSymbolType' index='0' name='symbol' type='i'/>
+<arg declared_type='CGFloat' index='1' name='horizontalEdgeLength' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='2' name='verticalEdgeLength' type='f' type64='d'/>
+<arg declared_type='CGPoint' index='3' name='startPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='CGContextRef' index='4' name='ctx' type='^{CGContext=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='FBSquareFontView'>
+<method selector='glowColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='glowSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='horizontalEdgeLength'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='horizontalPadding'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='innerGlowColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='innerGlowSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='lineCap'>
+<retval declared_type='CGLineCap' type='i'/>
+</method>
+<method selector='lineColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='lineJoin'>
+<retval declared_type='CGLineJoin' type='i'/>
+</method>
+<method selector='lineWidth'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='margin'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='resetSize'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGlowColor:'>
+<arg declared_type='UIColor*' index='0' name='glowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGlowSize:'>
+<arg declared_type='float' index='0' name='glowSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHorizontalEdgeLength:'>
+<arg declared_type='float' index='0' name='horizontalEdgeLength' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHorizontalPadding:'>
+<arg declared_type='float' index='0' name='horizontalPadding' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerGlowColor:'>
+<arg declared_type='UIColor*' index='0' name='innerGlowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerGlowSize:'>
+<arg declared_type='float' index='0' name='innerGlowSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineCap:'>
+<arg declared_type='CGLineCap' index='0' name='lineCap' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineColor:'>
+<arg declared_type='UIColor*' index='0' name='lineColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineJoin:'>
+<arg declared_type='CGLineJoin' index='0' name='lineJoin' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLineWidth:'>
+<arg declared_type='float' index='0' name='lineWidth' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMargin:'>
+<arg declared_type='float' index='0' name='margin' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setText:'>
+<arg declared_type='NSString*' index='0' name='text' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVerticalEdgeLength:'>
+<arg declared_type='float' index='0' name='verticalEdgeLength' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVerticalPadding:'>
+<arg declared_type='float' index='0' name='verticalPadding' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sizeOfContents'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='text'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='verticalEdgeLength'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='verticalPadding'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+</signatures>
