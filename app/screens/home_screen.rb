@@ -14,8 +14,8 @@ class HomeScreen < PM::Screen
 
   def set_up_view
     set_attributes self.view, :home_view_style # found in HomeStyles module
-    add UILabel.new, :label_view_style
-
+    temp = add UILabel.new, :label_view_style
+    $junk = temp
     true
   end
 
