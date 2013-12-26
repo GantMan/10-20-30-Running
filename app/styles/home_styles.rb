@@ -23,4 +23,19 @@ module HomeStyles
       background_color: UIColor.grayColor
     }
   end
+
+  def title_label_style
+    {
+      text: "10 20 30",
+      dotType: FBFontDotTypeSquare,
+      numberOfBottomPaddingDot: 1,
+      numberOfTopPaddingDot: 1,
+      numberOfLeftPaddingDot: 2,
+      numberOfRightPaddingDot: 2,
+      glowSize: 20.0,
+      innerGlowSize: 3.0,
+      edgeLength: 4.0,
+      frame: CGRectMake(10, 200, 300, 50)
+    }
+  end
 end
