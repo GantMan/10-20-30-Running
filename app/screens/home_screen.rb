@@ -5,12 +5,10 @@ class HomeScreen < PM::Screen
 
   def on_load
     set_nav_bar_button :left, title: "Help", action: :help_tapped
-    set_nav_bar_button :right, title: "States", action: :states_tapped
+    set_nav_bar_button :right, title: "Settings", action: :states_tapped
 
-    #draw_bitmap_font
-    v = FBBitmapFontView.alloc.initWithFrame(CGRectMake(10, 200, 300, 50))
-    v.text = "Yo"
-    view.addSubview(v)
+    draw_bitmap_font
+
   end
 
   def will_appear
@@ -37,7 +35,7 @@ class HomeScreen < PM::Screen
   def draw_bitmap_font
     frame = CGRectMake(10, 200, 300, 50)
     v = FBBitmapFontView.alloc.initWithFrame(frame)
-    v.text = "Hai"
+    v.text = "10 20 30"
     v.dotType = FBFontDotTypeSquare
     v.numberOfBottomPaddingDot = 1
     v.numberOfTopPaddingDot = 1
@@ -45,9 +43,8 @@ class HomeScreen < PM::Screen
     v.numberOfRightPaddingDot = 2
     v.glowSize = 20.0
     v.innerGlowSize = 3.0
-    v.edgeLength = 5.0
+    v.edgeLength = 4.0
     self.view.addSubview(v)
     v.resetSize
-    v.centerizeInWidth(320)
   end
 end
