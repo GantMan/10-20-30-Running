@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C32EE4C21F214905B5714303"
-               BuildableName = "libPods.a"
-               BlueprintName = "Pods"
+               BlueprintIdentifier = "ED4190131FF8484891B936BA"
+               BuildableName = "libPods-MKMapView-ZoomLevel.a"
+               BlueprintName = "Pods-MKMapView-ZoomLevel"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

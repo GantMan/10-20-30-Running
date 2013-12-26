@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E4E0D8F536F414D962C315C"
+               BlueprintIdentifier = "F24CAC99BF764DDCB20D6B02"
                BuildableName = "libPods-FBDigitalFont.a"
                BlueprintName = "Pods-FBDigitalFont"
                ReferencedContainer = "container:Pods.xcodeproj">

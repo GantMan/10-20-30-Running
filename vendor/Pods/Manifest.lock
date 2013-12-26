@@ -1,8 +1,10 @@
 PODS:
   - FBDigitalFont (0.0.3)
+  - MKMapView-ZoomLevel (1.1.0)
 
 DEPENDENCIES:
   - FBDigitalFont (from `https://github.com/lyokato/FBDigitalFont.git`)
+  - MKMapView-ZoomLevel (~> 1.1.0)
 
 EXTERNAL SOURCES:
   FBDigitalFont:
@@ -10,5 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBDigitalFont: c4711864b4db258a1a97c75262e4f2b6cb3eb294
+  MKMapView-ZoomLevel: a5c40a499eff1c1ec73bf12cf21e1a823dbc53cd
 
 COCOAPODS: 0.29.0

@@ -12,5 +12,6 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'FBDigitalFont', :git => 'https://github.com/lyokato/FBDigitalFont.git'
+    pod 'MKMapView-ZoomLevel', '~> 1.1.0'
   end
 end
