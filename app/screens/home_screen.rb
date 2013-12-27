@@ -6,7 +6,6 @@ class HomeScreen < PM::Screen
   def on_load
     set_nav_bar_button :left, title: "Help", action: :help_tapped
     set_nav_bar_button :right, title: "Settings", action: :states_tapped
-    # TODO: This is blowing up the # of views, with no deletion.
     1.second.every do
       @time.removeFromSuperview if @time 
       @time = draw_seconds(Time.now.sec)
@@ -36,7 +35,7 @@ class HomeScreen < PM::Screen
   end
 
   def draw_seconds message
-    frame = CGRectMake(60, 300, 300, 50)
+    frame = CGRectMake(80, 300, 300, 50)
     v = FBLCDFontView.alloc.initWithFrame(frame)
     v.text = "%02d" % message # force leading zeros
     v.lineWidth = 8
