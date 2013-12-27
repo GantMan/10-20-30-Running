@@ -8,7 +8,8 @@ class HomeScreen < PM::Screen
     set_nav_bar_button :right, title: "Settings", action: :states_tapped
     # TODO: This is blowing up the # of views, with no deletion.
     1.second.every do
-      draw_seconds(Time.now.sec)
+      @time.removeFromSuperview if @time 
+      @time = draw_seconds(Time.now.sec)
     end
   end
 
