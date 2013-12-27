@@ -1,11 +1,8 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
 <enum name='COCOAPODS_VERSION_MAJOR_FBDigitalFont' value='0'/>
-<enum name='COCOAPODS_VERSION_MAJOR_MKMapView_ZoomLevel' value='1'/>
 <enum name='COCOAPODS_VERSION_MINOR_FBDigitalFont' value='0'/>
-<enum name='COCOAPODS_VERSION_MINOR_MKMapView_ZoomLevel' value='1'/>
 <enum name='COCOAPODS_VERSION_PATCH_FBDigitalFont' value='3'/>
-<enum name='COCOAPODS_VERSION_PATCH_MKMapView_ZoomLevel' value='0'/>
 <enum name='FBFontDotTypeCircle' value='1'/>
 <enum name='FBFontDotTypeSquare' value='0'/>
 <enum name='FBFontSymbol0' value='0'/>
@@ -427,43 +424,6 @@
 </method>
 <method selector='verticalPadding'>
 <retval declared_type='float' type='f'/>
-</method>
-</class>
-<class name='MKMapView'>
-<method selector='coordinateRegionWithMapView:centerCoordinate:andZoomLevel:'>
-<arg declared_type='MKMapView*' index='0' name='mapView' type='@'/>
-<arg declared_type='CLLocationCoordinate2D' index='1' name='centerCoordinate' type='{_CLLocationCoordinate2D=dd}'/>
-<arg declared_type='NSUInteger' index='2' name='zoomLevel' type='I' type64='Q'/>
-<retval declared_type='MKCoordinateRegion' type='{_MKCoordinateRegion={?=dd}{?=dd}}'/>
-</method>
-<method class_method='true' selector='latitudeForOriginY:'>
-<arg declared_type='double' index='0' name='originY' type='d'/>
-<retval declared_type='double' type='d'/>
-</method>
-<method class_method='true' selector='longitudeForOriginX:'>
-<arg declared_type='double' index='0' name='originX' type='d'/>
-<retval declared_type='double' type='d'/>
-</method>
-<method class_method='true' selector='originXForLongitude:'>
-<arg declared_type='double' index='0' name='longitude' type='d'/>
-<retval declared_type='double' type='d'/>
-</method>
-<method class_method='true' selector='originYForLatitude:'>
-<arg declared_type='double' index='0' name='latitude' type='d'/>
-<retval declared_type='double' type='d'/>
-</method>
-<method class_method='true' selector='realWorldDistanceOfMapView:'>
-<arg declared_type='MKMapView*' index='0' name='mapView' type='@'/>
-<retval declared_type='double' type='d'/>
-</method>
-<method selector='setCenterCoordinate:zoomLevel:animated:'>
-<arg declared_type='CLLocationCoordinate2D' index='0' name='centerCoordinate' type='{_CLLocationCoordinate2D=dd}'/>
-<arg declared_type='NSUInteger' index='1' name='zoomLevel' type='I' type64='Q'/>
-<arg declared_type='BOOL' index='2' name='animated' type='B'/>
-<retval declared_type='void' type='v'/>
-</method>
-<method selector='zoomLevel'>
-<retval declared_type='NSUInteger' type='I' type64='Q'/>
 </method>
 </class>
 </signatures>
