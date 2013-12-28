@@ -8,4 +8,3 @@ http://www.youtube.com/watch?v=MQvVXJubm5I
 
 Pods:
 * (FB Digital Font)[https://github.com/lyokato/FBDigitalFont]
-* (KY Circle Menu)[https://github.com/Kjuly/KYCircleMenu]
