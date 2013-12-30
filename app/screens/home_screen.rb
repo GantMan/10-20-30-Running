@@ -19,7 +19,7 @@ class HomeScreen < PM::Screen
     title = add FBBitmapFontView.new, :title_label_style
     text_label = add UILabel.new, :label_view_style
     @seg = add UISegmentedControl.bar(["Start","Stop"]), :segment_style
-    @underline = add UIImageView.alloc.initWithImage('underline0.png'.uiimage), :underline_image_style
+    @underline = add UIImageView.alloc.initWithImage('underline0'.uiimage), :underline_image_style
 
     @seg.on(:change) { 
       ap "Touched! #{@seg.titleForSegmentAtIndex @seg.selectedSegmentIndex}"
@@ -39,6 +39,8 @@ class HomeScreen < PM::Screen
     @timer = 1.second.every do
       @time.removeFromSuperview if @time 
       @time = draw_seconds(Time.now.sec)
+      image_num = Time.now.sec % 4
+      @underline.image = "underline#{image_num}".uiimage
     end
   end
 
