@@ -6,9 +6,7 @@ class HomeScreen < PM::Screen
   def on_load
     set_nav_bar_button :left, title: "Help", action: :help_tapped
     set_nav_bar_button :right, title: "Settings", action: :states_tapped
-
-
-
+    draw_seconds 0 
   end
 
   def will_appear
@@ -43,7 +41,8 @@ class HomeScreen < PM::Screen
   end
 
   def kill_timer
-    @timer.invalidate
+    @timer.invalidate if @timer
+    draw_seconds 0
   end
 
   def states_tapped
