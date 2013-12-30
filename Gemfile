@@ -6,3 +6,4 @@ gem "ProMotion", "~> 1.1.0"
 gem "sugarcube", :require => 'sugarcube-common' # monkeypatch things
 # gem "rmq" # jQuery for RubyMotion
 gem 'motion-cocoapods'
+gem "awesome_print_motion"

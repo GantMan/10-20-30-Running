@@ -40,4 +40,10 @@ module HomeStyles
       resetSize: [] # ProMotion splats -> like calling the method with no params
     }
   end
+
+  def segment_style
+    {
+     frame: CGRectMake(10, 450, 305, 52) 
+    }
+  end
 end

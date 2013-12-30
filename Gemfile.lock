@@ -6,6 +6,7 @@ GEM
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    awesome_print_motion (0.1.0)
     claide (0.4.0)
     cocoapods (0.29.0)
       activesupport (>= 3.2.15, < 4)
@@ -50,5 +51,6 @@ PLATFORMS
 
 DEPENDENCIES
   ProMotion (~> 1.1.0)
+  awesome_print_motion
   motion-cocoapods
   sugarcube

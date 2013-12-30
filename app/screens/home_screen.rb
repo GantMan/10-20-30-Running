@@ -6,10 +6,9 @@ class HomeScreen < PM::Screen
   def on_load
     set_nav_bar_button :left, title: "Help", action: :help_tapped
     set_nav_bar_button :right, title: "Settings", action: :states_tapped
-    1.second.every do
-      @time.removeFromSuperview if @time 
-      @time = draw_seconds(Time.now.sec)
-    end
+
+
+
   end
 
   def will_appear
@@ -20,11 +19,32 @@ class HomeScreen < PM::Screen
     set_attributes self.view, :home_view_style 
     title = add FBBitmapFontView.new, :title_label_style
     text_label = add UILabel.new, :label_view_style
-    $myview = self
+    @seg = add UISegmentedControl.bar(["Start","Stop"]), :segment_style
+
+    @seg.on(:change) { 
+      ap "Touched! #{@seg.titleForSegmentAtIndex @seg.selectedSegmentIndex}"
+      case @seg.selectedSegmentIndex
+      when 0 # start
+        start_timer
+      else # end
+        kill_timer
+      end
+    }
     true
   end
 
   private 
+
+  def start_timer
+    @timer = 1.second.every do
+      @time.removeFromSuperview if @time 
+      @time = draw_seconds(Time.now.sec)
+    end
+  end
+
+  def kill_timer
+    @timer.invalidate
+  end
 
   def states_tapped
     open StatesScreen
@@ -35,7 +55,7 @@ class HomeScreen < PM::Screen
   end
 
   def draw_seconds message
-    frame = CGRectMake(80, 300, 300, 50)
+    frame = CGRectMake(80, 250, 300, 50)
     v = FBLCDFontView.alloc.initWithFrame(frame)
     v.text = "%02d" % message # force leading zeros
     v.lineWidth = 8
