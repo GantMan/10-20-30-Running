@@ -15,9 +15,11 @@ class HomeScreen < PM::Screen
 
   def set_up_view
     set_attributes self.view, :home_view_style 
+
     title = add FBBitmapFontView.new, :title_label_style
     text_label = add UILabel.new, :label_view_style
     @seg = add UISegmentedControl.bar(["Start","Stop"]), :segment_style
+    @underline = add UIImageView.alloc.initWithImage('underline0.png'.uiimage), :underline_image_style
 
     @seg.on(:change) { 
       ap "Touched! #{@seg.titleForSegmentAtIndex @seg.selectedSegmentIndex}"
@@ -51,6 +53,10 @@ class HomeScreen < PM::Screen
 
   def help_tapped
     open_modal HelpScreen.new(nav_bar: true)
+  end
+
+  def draw_underline position
+
   end
 
   def draw_seconds message

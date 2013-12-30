@@ -41,9 +41,17 @@ module HomeStyles
     }
   end
 
+  def underline_image_style
+    {
+      frame: CGRectMake(4, 123, 316, 8),
+
+    }
+  end
+
   def segment_style
     {
      frame: CGRectMake(10, 450, 305, 52) 
     }
   end
+
 end
