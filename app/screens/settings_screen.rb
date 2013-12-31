@@ -1,7 +1,7 @@
-class StatesScreen < PM::TableScreen
-  searchable placeholder: "Search states"
+class SettingsScreen < PM::TableScreen
+  searchable placeholder: "Search stuff"
 
-  title "States"
+  title "Settings"
 
   def table_data
     [{

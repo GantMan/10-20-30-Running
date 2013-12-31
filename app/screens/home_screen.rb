@@ -1,11 +1,11 @@
 class HomeScreen < PM::Screen
   include HomeStyles
 
-  title "Home"
+  title "Timer"
 
   def on_load
     set_nav_bar_button :left, title: "Help", action: :help_tapped
-    set_nav_bar_button :right, title: "Settings", action: :states_tapped
+    set_nav_bar_button :right, title: "Settings", action: :settings_tapped
     @cycle_manager = CycleManager.new
     draw_seconds 0 
   end
@@ -50,35 +50,37 @@ class HomeScreen < PM::Screen
     draw_underline @cycle_manager.cycle
   end
 
-  def states_tapped
-    open StatesScreen
+  def settings_tapped 
+    open SettingsScreen 
   end
 
   def help_tapped
     open_modal HelpScreen.new(nav_bar: true)
   end
 
-  def draw_underline position
-    @underline.image = "underline#{position}".uiimage
-  end
+  private 
 
-  def draw_seconds message
-    frame = CGRectMake(80, 250, 300, 50)
-    v = FBLCDFontView.alloc.initWithFrame(frame)
-    v.text = "%02d" % message # force leading zeros
-    v.lineWidth = 8
-    v.drawOffLine = true
-    v.edgeLength = 40
-    v.margin = 10
-    v.backgroundColor = :black.uicolor
-    v.horizontalPadding = 30
-    v.verticalPadding = 14
-    v.glowSize = 10.0
-    v.glowColor = 0x00ffff.uicolor
-    v.innerGlowColor = 0x00ffff.uicolor
-    v.innerGlowSize = 3.0
-    self.view.addSubview(v)
-    v.resetSize
-    return v
-  end
+    def draw_underline position
+      @underline.image = "underline#{position}".uiimage
+    end
+
+    def draw_seconds message
+      frame = CGRectMake(80, 250, 300, 50)
+      v = FBLCDFontView.alloc.initWithFrame(frame)
+      v.text = "%02d" % message # force leading zeros
+      v.lineWidth = 8
+      v.drawOffLine = true
+      v.edgeLength = 40
+      v.margin = 10
+      v.backgroundColor = :black.uicolor
+      v.horizontalPadding = 30
+      v.verticalPadding = 14
+      v.glowSize = 10.0
+      v.glowColor = 0x00ffff.uicolor
+      v.innerGlowColor = 0x00ffff.uicolor
+      v.innerGlowSize = 3.0
+      self.view.addSubview(v)
+      v.resetSize
+      return v
+    end
 end
