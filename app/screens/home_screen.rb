@@ -6,6 +6,7 @@ class HomeScreen < PM::Screen
   def on_load
     set_nav_bar_button :left, title: "Help", action: :help_tapped
     set_nav_bar_button :right, title: "Settings", action: :states_tapped
+    @cycle_manager = CycleManager.new
     draw_seconds 0 
   end
 
@@ -19,7 +20,7 @@ class HomeScreen < PM::Screen
     title = add FBBitmapFontView.new, :title_label_style
     text_label = add UILabel.new, :label_view_style
     @seg = add UISegmentedControl.bar(["Start","Stop"]), :segment_style
-    @underline = add UIImageView.alloc.initWithImage('underline0'.uiimage), :underline_image_style
+    @underline = add UIImageView.alloc.initWithImage('underline-1'.uiimage), :underline_image_style
 
     @seg.on(:change) { 
       ap "Touched! #{@seg.titleForSegmentAtIndex @seg.selectedSegmentIndex}"
@@ -39,8 +40,7 @@ class HomeScreen < PM::Screen
     @timer = 1.second.every do
       @time.removeFromSuperview if @time 
       @time = draw_seconds(Time.now.sec)
-      image_num = Time.now.sec % 4
-      @underline.image = "underline#{image_num}".uiimage
+      draw_underline @cycle_manager.next_cycle
     end
   end
 
@@ -58,7 +58,7 @@ class HomeScreen < PM::Screen
   end
 
   def draw_underline position
-
+    @underline.image = "underline#{position}".uiimage
   end
 
   def draw_seconds message

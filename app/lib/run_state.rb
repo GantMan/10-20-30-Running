@@ -1,6 +1,6 @@
 module RunState
-  OFF = 0
-  TEN = 1
-  TWENTY = 2
-  THIRTY = 3
+  OFF = -1
+  TEN = 0
+  TWENTY = 1
+  THIRTY = 2
 end
