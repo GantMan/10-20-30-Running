@@ -37,16 +37,17 @@ class HomeScreen < PM::Screen
   private 
 
   def start_timer
-    @timer = 1.second.every do
-      @time.removeFromSuperview if @time 
-      @time = draw_seconds(Time.now.sec)
-      draw_underline @cycle_manager.next_cycle
+    @timer = 500.milliseconds.every do
+      @time.removeFromSuperview if @time
+      @time = draw_seconds @cycle_manager.tick
+      draw_underline @cycle_manager.cycle
     end
   end
 
   def kill_timer
     @timer.invalidate if @timer
-    draw_seconds 0
+    draw_seconds @cycle_manager.cycle_kill
+    draw_underline @cycle_manager.cycle
   end
 
   def states_tapped
