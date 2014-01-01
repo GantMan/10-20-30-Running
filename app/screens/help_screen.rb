@@ -14,13 +14,22 @@ class HelpScreen < PM::GroupedTableScreen
   end
 
   def table_data
-    [{
-      title: "Get Help",
+    [
+      {
+      title: "Cycles",
       cells: [
-        { title: "Email us", action: :email_us },
-        { title: "Dummy cell" }
+        { title: "Total Cycles", action: :email_us }
       ]
-    }]
+      },
+      {
+      title: "Sound",
+      cells: [
+        { title: "Alert Sound", action: :email_us },
+        { title: "Lead Up Alert" }
+      ]
+      }
+
+  ]
   end
 
   def email_us
