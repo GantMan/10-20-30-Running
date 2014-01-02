@@ -1,19 +1,13 @@
-GIT
-  remote: git://github.com/clearsightstudio/ProMotion.git
-  revision: 77b8e9e9b38bd68df893cb763a575e3941994d95
-  branch: edge
-  specs:
-    ProMotion (1.1.0)
-      methadone
-      motion-require (>= 0.0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    ProMotion (1.1.1)
+      methadone
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     awesome_print_motion (0.1.0)
+    bubble-wrap (1.4.0)
     claide (0.4.0)
     cocoapods (0.29.0)
       activesupport (>= 3.2.15, < 4)
@@ -36,6 +30,9 @@ GEM
     cocoapods-try-release-fix (0.1.1)
     colored (1.2)
     escape (0.0.4)
+    formotion (1.6)
+      bubble-wrap (~> 1.4.0)
+      motion-require (~> 0.0.3)
     fuzzy_match (2.0.4)
     i18n (0.6.5)
     json_pure (1.8.1)
@@ -58,7 +55,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ProMotion!
+  ProMotion (~> 1.1.1)
   awesome_print_motion
+  formotion
   motion-cocoapods
   sugarcube
