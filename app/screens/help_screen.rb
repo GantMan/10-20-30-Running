@@ -21,12 +21,14 @@ class HelpScreen < PM::FormotionScreen
           title: "Total Cycle Blocks",
           key: :cycles_count,
           type: :picker,
+          value: '0',
           items: [['Forever', '0'], ['1','1'], ['2','2'], ['3','3'], ['4','4'], ['5','5']],
           input_accessory: :done
         },{
           title: "Seconds Between Blocks",
           key: :rest_blocks,
           type: :number,
+          value: 0,
           input_accessory: :done
         }]
       },{
@@ -44,6 +46,7 @@ class HelpScreen < PM::FormotionScreen
               rows: [{
                 title: "Beeps",
                 key: :Beeps,
+                value: true,
                 type: :check
               },{
                 title: "Boops",
