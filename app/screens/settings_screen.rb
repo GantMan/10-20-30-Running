@@ -22,8 +22,8 @@ class SettingsScreen < PM::FormotionScreen
           key: :cycles_count,
           type: :picker,
           value: '0',
-          items: [['Forever', '0'], ['1','1'], ['2','2'], ['3','3'], ['4','4'], ['5','5']],
-          input_accessory: :done
+          input_accessory: :done,
+          items: blocks_array
         },{
           title: "Seconds Between Blocks",
           key: :rest_blocks,
@@ -67,5 +67,14 @@ class SettingsScreen < PM::FormotionScreen
   def close_tapped
     close
   end
+
+
+    def blocks_array
+      blocks = [['Forever', '0']]
+      (1..10).each do |i|
+        blocks << ["#{i}", "#{i}"]
+      end
+      blocks
+    end
 end
 

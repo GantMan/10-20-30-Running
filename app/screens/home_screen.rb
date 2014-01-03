@@ -36,29 +36,28 @@ class HomeScreen < PM::Screen
 
   private 
 
-  def start_timer
-    @timer = 500.milliseconds.every do
-      @time.removeFromSuperview if @time
-      @time = draw_seconds @cycle_manager.tick
+    def start_timer
+      @timer = 500.milliseconds.every do
+        @time.removeFromSuperview if @time
+        @time = draw_seconds @cycle_manager.tick
+        draw_underline @cycle_manager.cycle
+      end
+    end
+
+    def kill_timer
+      @timer.invalidate if @timer
+      draw_seconds @cycle_manager.cycle_kill
       draw_underline @cycle_manager.cycle
     end
-  end
 
-  def kill_timer
-    @timer.invalidate if @timer
-    draw_seconds @cycle_manager.cycle_kill
-    draw_underline @cycle_manager.cycle
-  end
+    def settings_tapped 
+      open_modal SettingsScreen.new(nav_bar: true)
+    end
 
-  def settings_tapped 
-    open_modal SettingsScreen.new(nav_bar: true)
-  end
+    def help_tapped
+      open HelpScreen
+    end
 
-  def help_tapped
-    open HelpScreen
-  end
-
-  private 
 
     def draw_underline position
       @underline.image = "underline#{position}".uiimage
