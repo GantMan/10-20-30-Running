@@ -4,8 +4,8 @@ class HomeScreen < PM::Screen
   title "Timer"
 
   def on_load
-    set_nav_bar_button :left, title: "Help", action: :help_tapped
-    set_nav_bar_button :right, title: "Settings", action: :settings_tapped
+    set_nav_bar_button :left, title: "Settings", action: :settings_tapped
+    set_nav_bar_button :right, title: "Help", action: :help_tapped
     @cycle_manager = CycleManager.new
     draw_seconds 0 
   end
@@ -51,11 +51,11 @@ class HomeScreen < PM::Screen
   end
 
   def settings_tapped 
-    open SettingsScreen 
+    open_modal SettingsScreen.new(nav_bar: true)
   end
 
   def help_tapped
-    open_modal HelpScreen.new(nav_bar: true)
+    open HelpScreen
   end
 
   private 
