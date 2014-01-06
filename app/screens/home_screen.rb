@@ -7,7 +7,7 @@ class HomeScreen < PM::Screen
     set_nav_bar_button :left, title: "Settings", action: :settings_tapped
     set_nav_bar_button :right, title: "Help", action: :help_tapped
     @cycle_manager = CycleManager.new
-    draw_seconds 0 
+    draw_seconds 0
   end
 
   def will_appear
