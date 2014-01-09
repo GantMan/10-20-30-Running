@@ -7,6 +7,7 @@ class HomeScreen < PM::Screen
     set_nav_bar_button :left, title: "Settings", action: :settings_tapped
     set_nav_bar_button :right, title: "Help", action: :help_tapped
     @cycle_manager = CycleManager.new
+    draw_blocks "Block 10"
     draw_seconds 0
   end
 
@@ -63,8 +64,30 @@ class HomeScreen < PM::Screen
       @underline.image = "underline#{position}".uiimage
     end
 
+    def draw_blocks message
+      frame = CGRectMake(10, 250, 300, 50)
+      b = FBSquareFontView.alloc.initWithFrame(frame)
+      b.text = message.to_s
+      b.lineWidth = 3.0
+      b.lineCap = KCGLineCapRound
+      b.lineJoin = KCGLineJoinRound
+      b.margin = 12.0
+      b.backgroundColor = 0x444444.uicolor
+      b.horizontalPadding = 30
+      b.verticalPadding = 14
+      b.glowSize = 10.0
+      b.innerGlowColor = 0x00ffff.uicolor
+      b.lineColor = 0xffffff.uicolor
+      b.innerGlowSize = 2.0
+      b.verticalEdgeLength = 8 
+      b.horizontalEdgeLength = 10
+      self.view.addSubview(b)
+      b.resetSize
+      return b
+    end
+
     def draw_seconds message
-      frame = CGRectMake(80, 250, 300, 50)
+      frame = CGRectMake(87, 310, 300, 50)
       v = FBLCDFontView.alloc.initWithFrame(frame)
       v.text = "%02d" % message # force leading zeros
       v.lineWidth = 8
