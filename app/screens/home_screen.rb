@@ -7,7 +7,7 @@ class HomeScreen < PM::Screen
     set_nav_bar_button :left, title: "Settings", action: :settings_tapped
     set_nav_bar_button :right, title: "Help", action: :help_tapped
     @cycle_manager = CycleManager.new
-    draw_blocks "Block 10"
+    draw_blocks 1
     draw_seconds 0
   end
 
@@ -40,7 +40,9 @@ class HomeScreen < PM::Screen
     def start_timer
       @timer = 500.milliseconds.every do
         @time.removeFromSuperview if @time
+        @block.removeFromSuperview if @block
         @time = draw_seconds @cycle_manager.tick
+        @block = draw_blocks @cycle_manager.block
         draw_underline @cycle_manager.cycle
       end
     end
@@ -67,7 +69,7 @@ class HomeScreen < PM::Screen
     def draw_blocks message
       frame = CGRectMake(10, 250, 300, 50)
       b = FBSquareFontView.alloc.initWithFrame(frame)
-      b.text = message.to_s
+      b.text = "Block #{message}"
       b.lineWidth = 3.0
       b.lineCap = KCGLineCapRound
       b.lineJoin = KCGLineJoinRound

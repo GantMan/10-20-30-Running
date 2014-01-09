@@ -1,5 +1,5 @@
 class CycleManager
-  attr_reader :cycle, :seconds
+  attr_reader :cycle, :block, :seconds
 
   def initialize
     cycle_kill
@@ -8,6 +8,7 @@ class CycleManager
   # clear out cycle state
   def cycle_kill
     @cycle = RunState::OFF
+    @block = 0
     @seconds = 0
   end
 
@@ -29,5 +30,6 @@ class CycleManager
     # Iterate to the next active cycle 
     def next_cycle
       @cycle = (@cycle + 1) % 3
+      @block = @block + 1 if @cycle == 0
     end
 end
