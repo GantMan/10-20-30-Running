@@ -67,7 +67,7 @@ class HomeScreen < PM::Screen
     end
 
     def draw_blocks message
-      frame = CGRectMake(10, 250, 300, 50)
+      frame = CGRectMake(10, 250, 300, 45)
       b = FBSquareFontView.alloc.initWithFrame(frame)
       b.text = "Block #{message}"
       b.lineWidth = 3.0
@@ -77,14 +77,14 @@ class HomeScreen < PM::Screen
       b.backgroundColor = 0x444444.uicolor
       b.horizontalPadding = 30
       b.verticalPadding = 14
-      b.glowSize = 10.0
+      b.glowSize = 5.0
       b.innerGlowColor = 0x00ffff.uicolor
       b.lineColor = 0xffffff.uicolor
       b.innerGlowSize = 2.0
       b.verticalEdgeLength = 8 
       b.horizontalEdgeLength = 10
       self.view.addSubview(b)
-      b.resetSize
+      #b.resetSize
       return b
     end
 
