@@ -10,4 +10,4 @@ gem "awesome_print_motion"
 
 # I wanna do formotion
 #gem 'ProMotion-formotion'
-gem 'formotion'
+gem 'formotion', git: "git@github.com:clayallsopp/formotion.git"

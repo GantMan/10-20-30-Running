@@ -16,7 +16,7 @@ class SettingsScreen < PM::FormotionScreen
   def table_data
     {
       title: "Settings",
-      #persist_as: :settings,
+      persist_as: :settings,
       sections: [{
         title: "Exercise Plan",
         rows: [{
