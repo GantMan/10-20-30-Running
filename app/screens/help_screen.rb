@@ -1,16 +1,21 @@
-class HelpScreen < PM::TableScreen
-  searchable placeholder: "Search stuff"
-
+class HelpScreen < PM::Screen
   title "Help"
 
-  def table_data
-    [{
-      title: "",
-      cells: State.all.map { |state| { title: state.name, action: :tapped_state } }
-    }]
+  def on_load
+    set_nav_bar_button :left, title: "Close", action: :close_tapped
   end
 
-  def tapped_state(args={})
-    PM.logger.debug args
+  def will_appear
+    @view_setup ||= self.set_up_view
+  end
+
+  def set_up_view
+    #set_attributes self.view, :home_view_style 
+    @title_image = add UIImageView.alloc.initWithImage('help'.uiimage)#, :underline_image_style
+    true
+  end
+
+  def close_tapped
+    close
   end
 end
