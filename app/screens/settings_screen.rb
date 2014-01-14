@@ -15,6 +15,7 @@ class SettingsScreen < PM::FormotionScreen
 
   def table_data
     {
+      title: "Settings",
       persist_as: :settings,
       sections: [{
         title: "Exercise Plan",
@@ -31,7 +32,10 @@ class SettingsScreen < PM::FormotionScreen
           type: :number,
           value: 0,
           input_accessory: :done
-        },{
+        }]
+      },{
+        title: "Sound",
+        rows: [{
           title: "Alert Sounds",
           key: :alert_sound,
           type: :subform,
@@ -56,7 +60,6 @@ class SettingsScreen < PM::FormotionScreen
         },{
           title: "Lead Up Alert",
           key: :lead_up_alert,
-          value: true,
           type: :switch
         }]
       }]
