@@ -1,4 +1,5 @@
 class HelpScreen < PM::Screen
+  include HelpStyles
   title "Help"
 
   def on_load
@@ -10,8 +11,9 @@ class HelpScreen < PM::Screen
   end
 
   def set_up_view
-    #set_attributes self.view, :home_view_style 
-    @title_image = add UIImageView.alloc.initWithImage('help'.uiimage)#, :underline_image_style
+    set_attributes self.view, :help_view_style 
+    add UIImageView.alloc.initWithImage('help'.uiimage), :title_image_style
+    add UILabel.new, :help_label_style
     true
   end
 
