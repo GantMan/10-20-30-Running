@@ -14,6 +14,11 @@ class HelpScreen < PM::Screen
     set_attributes self.view, :help_view_style 
     add UIImageView.alloc.initWithImage('help'.uiimage), :title_image_style
     add UILabel.new, :help_label_style
+    add @video_button = UIButton.rounded_rect, :video_button_style
+    @video_button.setTitle("View Video", forState:UIControlStateNormal)
+    @video_button.on(:touch) do 
+      ap "Magic happens here"
+    end
     true
   end
 

@@ -25,4 +25,11 @@ module HelpStyles
       background_color: 0x3e3e3e.uicolor
     }
   end
+
+  def video_button_style
+    {
+      resize: [ :left, :right, :top],
+      frame: CGRectMake(10, 470, 300, 66)
+    }
+  end
 end
