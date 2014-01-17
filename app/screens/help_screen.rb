@@ -17,7 +17,7 @@ class HelpScreen < PM::Screen
     add @video_button = UIButton.rounded_rect, :video_button_style
     @video_button.setTitle("View Video", forState:UIControlStateNormal)
     @video_button.on(:touch) do 
-      ap "Magic happens here"
+      "http://www.youtube.com/watch?v=MQvVXJubm5I".nsurl.open
     end
     true
   end
