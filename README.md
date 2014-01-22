@@ -8,4 +8,6 @@ http://www.youtube.com/watch?v=MQvVXJubm5I
 
 Pods:
 * [FB Digital Font](https://github.com/lyokato/FBDigitalFont)
-* Might use this: https://www.cocoacontrols.com/controls/bemsimplelinegraph?utm_source=IconoclastLabs
+* Might use one of these for charts: 
+  * https://www.cocoacontrols.com/controls/bemsimplelinegraph?utm_source=IconoclastLabs
+  * https://github.com/kevinzhow/PNChart
