@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:clayallsopp/formotion.git
-  revision: 075bb43dd3c73e5e8a611a221573f73d87a51439
+  revision: ecd56bdac1867c8331e44b82fa8dec33bcf8e7bf
   specs:
     formotion (1.6)
       bubble-wrap (~> 1.4.0)
