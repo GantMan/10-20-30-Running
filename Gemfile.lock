@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/rubymotion/BubbleWrap.git
-  revision: 73dcc24db5592b2a662061a019507e28d138b5bf
-  specs:
-    bubble-wrap (1.4.0)
-
-GIT
   remote: git@github.com:clayallsopp/formotion.git
   revision: ecd56bdac1867c8331e44b82fa8dec33bcf8e7bf
   specs:
@@ -21,6 +15,7 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     awesome_print_motion (0.1.0)
+    bubble-wrap (1.4.0)
     claide (0.4.0)
     cocoapods (0.29.0)
       activesupport (>= 3.2.15, < 4)
@@ -67,7 +62,6 @@ PLATFORMS
 DEPENDENCIES
   ProMotion (~> 1.1.1)
   awesome_print_motion
-  bubble-wrap!
   formotion!
   motion-cocoapods
   sugarcube

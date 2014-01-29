@@ -140,4 +140,10 @@ class HomeScreen < PM::Screen
       end
 
     end
+
+    def audioPLayerEndInterruption(player)
+      if (flags == AVAudioSessionInterruptionFlags_ShouldResume && @audio_player != nil)
+        @audio_player.play
+      end
+    end
 end
