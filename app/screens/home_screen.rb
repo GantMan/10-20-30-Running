@@ -9,6 +9,7 @@ class HomeScreen < PM::Screen
     @cycle_manager = CycleManager.new
     draw_blocks 1
     draw_seconds 0
+    play_sound
   end
 
   def will_appear
@@ -106,5 +107,37 @@ class HomeScreen < PM::Screen
       self.view.addSubview(v)
       v.resetSize
       return v
+    end
+
+    def play_sound 
+
+      audioSessionError = Pointer.new(:object)
+      audioSession = AVAudioSession.sharedInstance
+      if audioSession.setCategory(AVAudioSessionCategoryAmbient, error:audioSessionError)
+        p "Successfully set the audio session"
+      else
+        p "Could not set the audio session"
+      end
+      
+      Dispatch::Queue.concurrent.async do 
+        mainBundle = NSBundle.mainBundle
+        filePath = mainBundle.pathForResource("happy", ofType:"mp3")
+        fileData = NSData.dataWithContentsOfFile(filePath)
+        error = Pointer.new(:object)
+
+        @audio_player = AVAudioPlayer.alloc.initWithData(fileData, error:error)
+
+        unless (@audio_player.nil?)
+          @audio_player.delegate = self
+          if (@audio_player.prepareToPlay && @audio_player.play)
+            p "Successfully playing"
+          else
+            p "Failed to Play"
+          end
+        else
+          p "Failed to instantiate AVAudioPlayer"
+        end 
+      end
+
     end
 end
