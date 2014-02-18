@@ -12,5 +12,6 @@ Motion::Project::App.setup do |app|
   app.frameworks += %w(AVFoundation)
   app.pods do
     pod 'FBDigitalFont', :git => 'https://github.com/lyokato/FBDigitalFont.git'
+    pod 'PNChart', :git => 'https://github.com/kevinzhow/PNChart.git' #https://github.com/kevinzhow/PNChart
   end
 end
