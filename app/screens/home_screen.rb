@@ -17,14 +17,14 @@ class HomeScreen < PM::Screen
   end
 
   def set_up_view
-    set_attributes self.view, :home_view_style 
+    set_attributes self.view, :home_view_style
 
     title = add FBBitmapFontView.new, :title_label_style
     text_label = add UILabel.new, :label_view_style
     @seg = add UISegmentedControl.bar(["Start","Stop"]), :segment_style
     @underline = add UIImageView.alloc.initWithImage('underline-1'.uiimage), :underline_image_style
 
-    @seg.on(:change) { 
+    @seg.on(:change) {
       ap "Touched! #{@seg.titleForSegmentAtIndex @seg.selectedSegmentIndex}"
       case @seg.selectedSegmentIndex
       when 0 # start
@@ -36,7 +36,7 @@ class HomeScreen < PM::Screen
     true
   end
 
-  private 
+  private
 
     def start_timer
       @timer = 500.milliseconds.every do
@@ -54,7 +54,7 @@ class HomeScreen < PM::Screen
       draw_underline @cycle_manager.cycle
     end
 
-    def settings_tapped 
+    def settings_tapped
       open_modal SettingsScreen.new(nav_bar: true)
     end
 
@@ -82,7 +82,7 @@ class HomeScreen < PM::Screen
       b.innerGlowColor = 0x00ffff.uicolor
       b.lineColor = 0xffffff.uicolor
       b.innerGlowSize = 2.0
-      b.verticalEdgeLength = 8 
+      b.verticalEdgeLength = 8
       b.horizontalEdgeLength = 10
       self.view.addSubview(b)
       #b.resetSize
@@ -109,17 +109,17 @@ class HomeScreen < PM::Screen
       return v
     end
 
-    def play_sound 
+    def play_sound
 
       audioSessionError = Pointer.new(:object)
       audioSession = AVAudioSession.sharedInstance
       if audioSession.setCategory(AVAudioSessionCategoryAmbient, error:audioSessionError)
-        p "Successfully set the audio session"
+        ap "Successfully set the audio session"
       else
-        p "Could not set the audio session"
+        ap "Could not set the audio session"
       end
-      
-      Dispatch::Queue.concurrent.async do 
+
+      Dispatch::Queue.concurrent.async do
         mainBundle = NSBundle.mainBundle
         filePath = mainBundle.pathForResource("happy", ofType:"mp3")
         fileData = NSData.dataWithContentsOfFile(filePath)
@@ -130,13 +130,13 @@ class HomeScreen < PM::Screen
         unless (@audio_player.nil?)
           @audio_player.delegate = self
           if (@audio_player.prepareToPlay && @audio_player.play)
-            p "Successfully playing"
+            ap "Successfully playing"
           else
-            p "Failed to Play"
+            ap "Failed to Play"
           end
         else
-          p "Failed to instantiate AVAudioPlayer"
-        end 
+          ap "Failed to instantiate AVAudioPlayer"
+        end
       end
 
     end
